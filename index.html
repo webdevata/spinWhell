@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="manifest" href="manifest.json" />
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+  <meta name="theme-color" content="#db4938" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Spin Wheel</title>
+</head>
+
+<body>
+  
+  <div class="container">
+
+    <div class="spinBtn">Spin</div>
+
+    <div class="wheel">
+      <div class="number" style="--i:1; --clr:#db7093;"><span>Spain</span></div>
+      <div class="number" style="--i:2; --clr:#20b2aa;"><span>German</span></div>
+      <div class="number" style="--i:3; --clr:#d63e92;"><span>Anglia</span></div>
+      <div class="number" style="--i:4; --clr:#daa520;"><span>Italy</span></div>
+      <div class="number" style="--i:5; --clr:#ff340f;"><span>France</span></div>
+      <div class="number" style="--i:6; --clr:#ff7f50;"><span>Tamam</span></div>
+      <div class="number" style="--i:7; --clr:#3cb371;"><span>Mustaqil</span></div>
+      <div class="number" style="--i:8; --clr:#4169e1;"><span> 4.5 Yulduz</span></div>
+    </div>
+
+  </div>
+
+  <script>
+    let wheel = document.querySelector('.wheel');
+    let spinBtn = document.querySelector('.spinBtn');
+    let value = Math.ceil(Math.random() * 3600)
+
+    spinBtn.onclick = function () {
+      wheel.style.transform = "rotate(" + value +
+        "deg)"
+      value += Math.ceil(Math.random() * 3600)
+    }
+
+
+
+  </script>
+
+  <script src="js/app.js"></script>
+
+
+
+</body>
+
+
+</html>
